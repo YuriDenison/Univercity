@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build" default="main">
+    <property name="lib.dir" value="lib"/>
+    <property name="src.dir" value="src/filesystem"/>
+    <property name="tst.dir" value="src/test"/>
+    <property name="TALK" value="false"/>
+
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir" value="${build.dir}/jar"/>
+    <property name="junit.dir" value="C:/Program Files/Java/jdk1.7.0/jre/lib"/>
+
+    <property name="main-class" value="$filesystem.Maine "/>
+
+
+    <path id="classpath.base">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <path id="classpath.test">
+        <pathelement location="${tst.dir}"/>
+        <path refid="classpath.base"/>
+        <fileset dir="${junit.dir}">
+            <include name="**/junit-4.9b2.jar"/>
+        </fileset>
+    </path>
+
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath.base"/>
+    </target>
+    <target name="compile-test" depends="compile">
+        <javac srcdir="${tst.dir}" destdir="${classes.dir}" classpathref="classpath.test"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+        <path id="application" location="${jar.dir}/${ant.project.name}.jar"/>
+    </target>
+
+
+    <target name="test" depends="compile-test">
+        <echo>Running the junit tests...</echo>
+        <junit>
+            <classpath refid="classpath.test"/>
+
+            <formatter type="plain" usefile="false"/>
+            <batchtest>
+                <fileset dir="${tst.dir}" includes="**/*Test.class"/>
+            </batchtest>
+            <test name="test.btreefilesystem.BTreeTest"/>
+            <test name="test.btreefilesystem.BTreeFileSystemTest"/>
+
+            <test name="test.avltreefilesystem.AvlTreeTest"/>
+            <test name="test.avltreefilesystem.AvlTreeFileSystemTest"/>
+        </junit>
+    </target>
+
+    <target name="main" depends="clean, run, test"/>
+
+</project>

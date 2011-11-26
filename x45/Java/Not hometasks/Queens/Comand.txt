@@ -1,0 +1,1 @@
+jar cvfm queens.jar manifest.mf  -C out/production/Queens .

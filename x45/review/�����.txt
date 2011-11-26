@@ -1,0 +1,40 @@
+В пакете обнаружено 5 файлов, поэтому по порядку.
+
+1. Iteration.java
+В классе исключения принято реализовавывать 2 конструктора, поэтому должно выглядеть например так:
+
+public class Iteration extends Exception{
+    public Iteration (){
+    }
+    
+    public Iteration (String msg){
+        super(msg);
+    }
+}
+
+2. NoRemoveElement.java
+Аналогично.
+
+3. List.java
+ListElement используется только внутри класса List, поэтому нет необходимости делать его public. 
+Все поля классов должны быть private или protected (если нужна видимость полей в потомках), но никак не public.
+При необходимости должны быть геттеры и сеттеры.
+Не понятно, зачем метод делать throws SomeException, если он нигде не обрабатывает это исключение.
+В printList есть ошибка, а имеено не печатается последний элемент (ведь у его ячейки .next = null, поэтому while завершится не пройдя по ней).
+При удалении листа нужно не только удалять head, но и удалять tail.
+В addToHead можно обойтись без дополнительной переменной, написав head.setNext(new ListElement(value, head.getNext()));
+
+4. UniqueList.java
+Вместо копипаста можно и нужно писать 
+public void addToHead(int value) throws Iteration {
+    if (this.search(value)) {
+        throw new Iteration();
+    } else {
+        super.addToHead(value);
+    }
+}
+Аналогично остальные функции.
+
+5. UniqueListTest.java
+нет тестов ждущих исключения 
+нет теста printList(), отсюда не пофиксена ошибка

@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GettingStarted", "GettingStarted", "{1BE3B601-6AE5-4884-94F9-55230F6D1D3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simulation", "Simulation", "{1BE3B601-6AE5-4884-94F9-372208718423}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripting", "Scripting", "{1BE3B601-6AE5-4884-94F9-372208718424}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interoperability", "Interoperability", "{1BE3B601-6AE5-4884-94F9-372208718426}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebCrawl", "WebCrawl", "{B7A19B52-763D-4B9D-BA26-BCD8EF62B17D}"
+	ProjectSection(SolutionItems) = preProject
+		Web\InteractiveWebCrawl\script.fsx = Web\InteractiveWebCrawl\script.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForms", "WinForms", "{F63B3F04-F865-4E85-A8FA-ED9DB692C415}"
+	ProjectSection(SolutionItems) = preProject
+		UserInterface\WinformsScripting\editor.fsx = UserInterface\WinformsScripting\editor.fsx
+		UserInterface\WinformsScripting\helloform.fsx = UserInterface\WinformsScripting\helloform.fsx
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Samples101", "GettingStarted\Samples101\Samples101.fsproj", "{1BE3B601-6AE5-4884-94F9-55230F6D1D3B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntoductoryTutorial", "GettingStarted\IntroductoryTutorial\IntoductoryTutorial.fsproj", "{89B296A4-78E1-4A6C-9DE4-5377C4ADD393}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "3DVisualization", "Visualization\InteractiveDirectX\3DVisualization.fsproj", "{DCF30D18-70C2-49AE-953D-65A9DC5DD205}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ConcurrentLife", "Simulation\ConcurrentLife\ConcurrentLife.fsproj", "{9F84EC44-6329-42DC-83E4-87A82C797809}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelAutomation", "Interoperability\ExcelAutomation\ExcelAutomation.fsproj", "{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WordAutomation", "Interoperability\WordAutomation\WordAutomation.fsproj", "{AD95369D-5EC7-49B5-AE55-F2731C1DBA21}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SolarSystem", "Simulation\Solar System\SolarSystem.fsproj", "{049E8A6B-CF79-4790-A501-2188A2E755A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BE3B601-6AE5-4884-94F9-55230F6D1D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE3B601-6AE5-4884-94F9-55230F6D1D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE3B601-6AE5-4884-94F9-55230F6D1D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE3B601-6AE5-4884-94F9-55230F6D1D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B296A4-78E1-4A6C-9DE4-5377C4ADD393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B296A4-78E1-4A6C-9DE4-5377C4ADD393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B296A4-78E1-4A6C-9DE4-5377C4ADD393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B296A4-78E1-4A6C-9DE4-5377C4ADD393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF30D18-70C2-49AE-953D-65A9DC5DD205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF30D18-70C2-49AE-953D-65A9DC5DD205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF30D18-70C2-49AE-953D-65A9DC5DD205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF30D18-70C2-49AE-953D-65A9DC5DD205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F84EC44-6329-42DC-83E4-87A82C797809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F84EC44-6329-42DC-83E4-87A82C797809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F84EC44-6329-42DC-83E4-87A82C797809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F84EC44-6329-42DC-83E4-87A82C797809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD95369D-5EC7-49B5-AE55-F2731C1DBA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD95369D-5EC7-49B5-AE55-F2731C1DBA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD95369D-5EC7-49B5-AE55-F2731C1DBA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD95369D-5EC7-49B5-AE55-F2731C1DBA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{049E8A6B-CF79-4790-A501-2188A2E755A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{049E8A6B-CF79-4790-A501-2188A2E755A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{049E8A6B-CF79-4790-A501-2188A2E755A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{049E8A6B-CF79-4790-A501-2188A2E755A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BE3B601-6AE5-4884-94F9-55230F6D1D3B} = {1BE3B601-6AE5-4884-94F9-55230F6D1D3C}
+		{89B296A4-78E1-4A6C-9DE4-5377C4ADD393} = {1BE3B601-6AE5-4884-94F9-55230F6D1D3C}
+		{9F84EC44-6329-42DC-83E4-87A82C797809} = {1BE3B601-6AE5-4884-94F9-372208718423}
+		{049E8A6B-CF79-4790-A501-2188A2E755A6} = {1BE3B601-6AE5-4884-94F9-372208718423}
+		{B7A19B52-763D-4B9D-BA26-BCD8EF62B17D} = {1BE3B601-6AE5-4884-94F9-372208718424}
+		{F63B3F04-F865-4E85-A8FA-ED9DB692C415} = {1BE3B601-6AE5-4884-94F9-372208718424}
+		{DCF30D18-70C2-49AE-953D-65A9DC5DD205} = {1BE3B601-6AE5-4884-94F9-372208718424}
+		{3BDC7F4D-51C0-447E-9343-46EBA5E6BA92} = {1BE3B601-6AE5-4884-94F9-372208718426}
+		{AD95369D-5EC7-49B5-AE55-F2731C1DBA21} = {1BE3B601-6AE5-4884-94F9-372208718426}
+	EndGlobalSection
+EndGlobal
